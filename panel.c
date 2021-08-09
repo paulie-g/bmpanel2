@@ -870,8 +870,11 @@ static int process_events(struct panel *p)
 			break;
 
 		default:
+			/* Unknown XEvent(s) should be eaten, not logged
+			 *  
 			XWARNING("Unknown XEvent (type: %d, win: %d)",
 				 e.type, e.xany.window);
+			*/
 			break;
 		}
 	}
